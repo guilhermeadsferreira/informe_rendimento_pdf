@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header class='header'>
+			<div class='header__top'>
+				<div class='header__logo'>
+					<img src='https://assets.empresas.maistodos.com.br/mailing/logo_maistodos_header.png'></img>
+				</div>
+				<div class='header__account-info text-md text-neutral-600'>
+					<p>Conta corrente - Extrato</p>
+					<p>Good morning Vietnam</p>
+					<p>CNPJ: 78.965.922/0001-20</p>
+					<p>Ag: 0001 - CC: 55454-5</p>
+				</div>
+			</div>
+			<div class='header__bottom text-neutral-600 text-sm'>
+				<div>Período: 21/02/2024 a 22/02/2024</div>
+				<div>Data/Hora de emissão: 24/02/2024 às 13:20</div>
+			</div>
+		</header>
+
+
+		<table id="transactions">
+			<thead>
+				<tr class='text-md text-neutral-600'>
+					<th>Data da transação</th>
+					<th>Lançamentos</th>
+					<th>Documento</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr class='table__row table__row--header text-neutral-600 text-md'>
+					<td>21/02/2024</td>
+					<td colspan="2">Saldo do dia</td>
+					<td class='pl-16'>R$ 83.710,91</td>
+				</tr>
+
+				
+				<tr class='table__row text-md text-neutral-600'>
+					<td>22/02/2024</td>
+					<td class='text-sm'>
+						Transferência Pix recebida<br />
+						Medicamentos de Reodores de Pequeno Porte e CIA LTDA ME
+					</td>
+					<td>53327618216</td>
+					<td class=>+ R$ 40,00</td>
+				</tr>
+				
+				
+				<tr class='table__row table__row--header text-neutral-600 text-md'>
+					<td>22/02/2024</td>
+					<td colspan="2">Saldo do dia</td>
+					<td class='pl-16'>R$ 83.670,91</td>
+				</tr>
+
+				
+				<tr class='table__row text-md text-neutral-600'>
+					<td>21/02/2024</td>
+					<td class='text-sm'>
+						Transferência Pix enviada<br />
+						Roupa de Hamster ltda
+					</td>
+					<td>78250420268</td>
+					<td class=text-critical-500>- R$ 100,00</td>
+				</tr>
+				
+				<tr class='table__row text-md text-neutral-600'>
+					<td>21/02/2024</td>
+					<td class='text-sm'>
+						Transferência TED recebida<br />
+						Roupa de Hamster ltda
+					</td>
+					<td>78250420268</td>
+					<td class=>+ R$ 200,10</td>
+				</tr>
+				
+				
+			</tbody>
+		</table>
+	</body>
+</html>

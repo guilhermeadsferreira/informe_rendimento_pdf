@@ -7,11 +7,11 @@
 <body>
     <div class="header">
       <div class="header_account_info">
-        <h3>50515887 IGOR LUCIANO MAGRO</h3>
-        <p><strong>CNPJ: </strong>50515887000129</p>
+        <h3>{{holder_name}}</h3>
+        <p><strong>CNPJ: </strong>{{holder_document}}</p>
         <p>
-          <strong>Agência: </strong>0001 -
-          <strong>Conta: </strong>1109073833
+          <strong>Agência: </strong>{{account_branch}} -
+          <strong>Conta: </strong>{{account_number}}
         </p>
       </div>
       <div class="header_logo">
@@ -23,38 +23,46 @@
     </div>
     <div class="row_with_space_between margin-between-topic">
         <h3>Ano calendário</h3>
-        <h4>2023</h4>
+        <h4>{{reference_year}}</h4>
     </div>
     <div class="card-with-company-info">
         <div class="row_with_space_between">
             <span>Nome empresarial</span>
-            <span>50515887 IGOR LUCIANO MAGRO</span>
+            <span>{{holder_name}}</span>
         </div>
         <div class="row_with_space_between">
             <span>CNPJ</span>
-            <span>50515887000129</span>
+            <span>{{holder_document}}</span>
         </div>
     </div>
     <div class="row_with_space_between margin-between-topic">
         <h3>Pessoa beneficiária</h3>
     </div>
+    <div class="card-person-info">
+        <div class="row_with_space_between">
+            <span>Nome empresarial</span>
+            <span>{{holder_name}}</span>
+        </div>
+        <div class="row_with_space_between">
+            <span>CNPJ</span>
+            <span>{{holder_document}}</span>
+        </div>
+    </div>
     <div class="margin-between-topic balance-info">
         <h3>Informação de saldo</h3>
-        
+        {% for balance in balances %}
             <div class="row_with_space_between">
-              <p>Saldo em 31/12/2022</p>
-              <p>R$ 0.0</p>
+              <p>Saldo em 31/12/{{balance.year}}</p>
+              <p>R$ {{balance.amount.value}}</p>
             </div>
-        
-            <div class="row_with_space_between">
-              <p>Saldo em 31/12/2023</p>
-              <p>R$ 3.69</p>
-            </div>
-        
+        {% endfor %}
         <div class="row_with_space_between">
           <p>Rendimentos líquidos</p>
           <p>R$ 0,00</p>
         </div>
     </div>
+    <footer>
+        <p>informes gerado no dia dd/MM/yyyy às hh:mm</p>
+    </footer>
 </body>
 </html>

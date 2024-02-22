@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header class='header'>
+			<div class='header__top'>
+				<div class='header__logo'>
+					<img src='https://assets.empresas.maistodos.com.br/mailing/logo_maistodos_header.png'></img>
+				</div>
+				<div class='header__account-info text-md text-neutral-600'>
+					<p>Conta corrente - Extrato</p>
+					<p>{{ account.nickname }}</p>
+					<p>CNPJ: {{ account.document }}</p>
+					<p>Ag: {{ account.branch }} - CC: {{ account.number }}</p>
+				</div>
+			</div>
+			<div class='header__bottom text-neutral-600 text-sm'>
+				<div>Período: {{ start_date }} a {{ end_date }}</div>
+				<div>Data/Hora de emissão: {{ created_at }}</div>
+			</div>
+		</header>
+
+
+		<table id="transactions">
+			<thead>
+				<tr class='text-md text-neutral-600'>
+					<th>Data da transação</th>
+					<th>Lançamentos</th>
+					<th>Documento</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for group in transactions %}
+				<tr class='table__row table__row--header text-neutral-600 text-md'>
+					<td>{{ group.date }}</td>
+					<td colspan="2">Saldo do dia</td>
+					<td class='pl-16'>{{ group.date_amount }}</td>
+				</tr>
+
+				{% for item in group.transactions %}
+				<tr class='table__row text-md text-neutral-600'>
+					<td>{{ item.transacted_at }}</td>
+					<td class='text-sm'>
+						{{ item.event }}<br />
+						{{ item.display_message }}
+					</td>
+					<td>{{ item.document }}</td>
+					<td class={{ 'text-critical-500' if item.cash_flow == 'cash_out' }}>{{ item.amount }}</td>
+				</tr>
+				{% endfor %}
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</html>

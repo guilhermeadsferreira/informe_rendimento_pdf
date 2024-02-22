@@ -1,0 +1,118 @@
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunito-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunito-Bold.ttf");
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Nunito;
+}
+
+@page {
+    size: A4;
+    margin: 5mm;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    color: #00a786;
+    font-weight: bold;
+}
+
+.header {
+    flex-direction: row;
+}
+
+.header_account_info {
+    flex: 1;
+}
+
+.header_account_info h3, p {
+    margin-top: 5px;
+}
+
+.header_logo {
+    flex: 1;
+    align-items: flex-end;
+}
+
+.row_with_space_between {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.margin-between-topic {
+    margin-top: 48px;
+}
+
+.card-with-company-info {
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    padding: 32px 20px;
+    margin-top: 16px;
+}
+
+.card-with-company-info div:nth-child(2) {
+    margin-top: 16px;
+}
+
+.card-person-info {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: #e7e7e7;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 16px;
+}
+
+.card-person-info div:nth-child(2) {
+    margin-top: 16px;
+}
+
+.balance-info div {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.balance-info h3 {
+    margin-bottom: 4px;
+}
+
+.balance-info div:nth-child(n + 2) {
+    margin-top: 4px;
+}
+
+footer {
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #989898;
+    font-size: 10px;
+}

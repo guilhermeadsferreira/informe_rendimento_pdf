@@ -1,0 +1,107 @@
+/* ---- CSS Reset ---- */
+*,*::before,*::after{box-sizing:border-box} *{margin:0} body{line-height:1.5;-webkit-font-smoothing:antialiased} img,picture,video,canvas,svg{display:block;max-width:100%} input,button,textarea,select{font:inherit} p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word} #root,#__next{isolation:isolate}
+/* ---- CSS Reset ----- */
+
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito-Regular.ttf");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito-Bold.ttf");
+	font-weight: bold;
+}
+
+@page {
+	size: A4;
+	margin: 5mm;
+}
+
+body {
+	font-family: Nunito, sans-serif;
+}
+
+.header__top {
+	display: flex;
+	align-items: center;
+	padding: 32px 8px 8px;
+	border-bottom: 1px solid #D2D2D2;
+}
+
+.header__bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 8px;
+	line-height: 10.91px;
+	padding: 7.5px 8px 8px 8px;
+}
+
+.header__logo {
+	padding: 0 7.5px 0 8px;
+}
+
+.header__account-info {
+	padding: 10px 16.5px 10px;
+	border-left: 1px solid #D2D2D2;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th {
+	border: 1px hidden #434343;
+	border-right-style: solid;
+	border-left-style: solid;
+	font-weight: normal;
+	padding: 7px 8px;
+	text-align: left;
+}
+
+.table__row td {
+	padding: 5px 8px;
+}
+
+.table__row td {
+	border-bottom: 1px solid #434343;
+}
+
+.table__row:nth-child(odd):not(.table__row--header) td {
+	background-color: #F6F6F6;
+}
+
+.table__row--header td {
+	font-weight: bold;
+	background-color: #E7E7E7;
+	border-bottom: 1px solid #434343;
+}
+
+.text-neutral-900 {
+	color: #1A1A1A;
+}
+
+.text-neutral-600 {
+	color: #434343;
+}
+
+.text-critical-500 {
+	color: #FF1515;
+}
+
+.text-sm {
+	font-size: 8px;
+	line-height: 10.91px;
+}
+
+.text-md {
+	font-size: 10px;
+	line-height: 13.64px;
+}
+
+.pl-16 {
+	padding-left: 16px !important;
+}
