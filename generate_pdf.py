@@ -11,3 +11,4 @@ def generate_pdf_by_html(html_string, css_string, pdf_output_path):
         stylesheets=[css],
         font_config=font_config
     )
+    print(f"... wrote {pdf_output_path}")

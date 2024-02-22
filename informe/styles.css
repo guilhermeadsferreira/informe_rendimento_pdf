@@ -56,6 +56,11 @@ h3 {
     align-items: flex-end;
 }
 
+.header_logo img {
+    width: 185px;
+    height: auto;
+}
+
 .row_with_space_between {
     flex-direction: row;
     justify-content: space-between;
